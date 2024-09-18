@@ -2,17 +2,17 @@
 //
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
 {
-	int CookieCount = 0;
+	float CookieCount = 0;
 	cout << "Enter the number of cookies you'd like to bake. ";
 	cin >> CookieCount;
-	float CookieCountSol = CookieCount;
-	float Sugar = CookieCountSol *(1.5 / 48);
-	float Butter = 1 * (CookieCountSol / 48);
-	float Flour = CookieCountSol * (2.75 / 48);
-	cout << "\nTo bake " << CookieCount << " cookies, you will need: \n" << Sugar << " cups of sugar \n" << Butter << " cups of butter \n" << Flour << " cups of flour \n";
+	float Sugar = CookieCount *(1.5 / 48);
+	float Butter = 1 * (CookieCount / 48);
+	float Flour = CookieCount * (2.75 / 48);
+	cout << "\nTo bake " << CookieCount << " cookies, you will need: \n" << setprecision(2) << Sugar << " cups of sugar \n" << setprecision(2) << Butter << " cups of butter \n" << setprecision(2) << Flour << " cups of flour \n";
 }
 
